@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetch("https://dog.ceo/api/breed/corgi/images/random/3")
       .then((res) => res.json())
-      .then((data) => {
-        data.message.forEach((foto) => {
+      .then((data) => {data.message.forEach((foto) => {
           resultado.innerHTML += `<img src="${foto}" alt="Corgi"/>`;
         });
       })
